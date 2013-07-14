@@ -1,12 +1,16 @@
 var express = require('express');
 
 var app = express.createServer(express.logger());
-var indexFileBuffer = (index.html);
+var indexFileBuffer = fs.readFileSync('index.html');
 var buf = new Buffer(indexFileBuffer);
-app.get('/', function(request, response) {
-  response.send(buf.toString());
-});
+var indexString = buf.toString();
 
+
+ 
+app.get('/', function(request, response) {
+  response.send(indexString);
+});
+2A
 var port = process.env.PORT || 5000;
 app.listen(port, function() {
   console.log("Listening on " + port);
