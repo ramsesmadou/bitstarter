@@ -53,17 +53,28 @@ if(require.main == module) {
     if(program.url)  {
 	console.log("program.url= %2",program.url);
 	restler.get(program.url).on('complete', function(result){
-	    
-	    console.log("result = %s",result);
 	    inputhtmlfile=result;
+	    var checkJson = checkHtmlFile(inputhtmlfile, program.checks);
+	    var outJson = JSON.stringify(checkJson,null,4);
+	    console.log(outJson)
 	});
 	
     }else{
 	inputhtmlfile = fs.readFileSync(program.file);
-    }
-    var checkJson = checkHtmlFile(inputhtmlfile, program.checks);
-    var outJson = JSON.stringify(checkJson,null,4);
-    console.log(outJson);
+    
+	console.log("i got here");
+	var checkJson = checkHtmlFile(inputhtmlfile, program.checks);
+	var outJson = JSON.stringify(checkJson,null,4);
+	fs.writeFile("./graderOutput.json",outJson,function(err){
+	    if(err){
+		console.log(err);
+		}
+	    else {
+		console.log("the json file has been written!");
+		}
+	    });
+	console.log(outJson);
+	}
 } else {
     exports.checkHtmlFile = checkHtmlFile;
 }
