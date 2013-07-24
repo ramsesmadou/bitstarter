@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <title>My First Bitstarter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fbootstrap-combined.no-icons.min.css">
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.02/css/font-awesome.css">
-    <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fsocial-buttons.css">
+    <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css">
+    <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fsocial-buttons.css">
     <script src="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fjquery.js"></script>
     <script src="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fbootstrap.js"></script>
     <link href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic" rel="stylesheet" type="text/css">
@@ -168,8 +168,8 @@
 		   <div class="span4">
 		     <div class="linediv-r">
 		       <h3>10</h3> <p>days left</p>
-		       </div>
 		     </div>
+		   </div>
 		 </div>
 	       </div>
 	       <div class="span10 offset1">
@@ -180,11 +180,91 @@
 		   <div class="bar bar-warning" style="width: 40%;"></div>
 		   </div>
 		 </div>
+	       <div class="span6 offset3 order">
+		 <!-- Standard Bootstrap button. -->
+		 <!-- http://twitter.github.io/bootstrap/base-css.html#buttons -->
+		 <button class="btn btn-success btn-large">Preorder</button>
+		 </div>
+	       <div class="span8 offset2 social">
+		 <!-- Social buttons aree not included in the default bootstrap. -->
+		 <!-- See: http://noizwaves.github.io/bootstrap-social-buttons -->
+		 <button class="btn btn-twitter"><i class="icon-twitter"></i> | Twitter</button>
+		 <button class="btn btn-facebook"><i class="icon-facebook"></i> | Facebook</button>
+		 </div>
+	       </div>
+	     </div>
 
+	   <!-- Beyond this point the marketing copy begins. -->
+	   <div class="row-fluid section1">
+	     <div class="span5 offset1 asset">
+	       <img class="img-polaroid" src="http://placehold.it/480x300">
+	       </div>
+	     <div class="span5 copy">
+	       <p>
+		 Lots of smaple text here . mOur product is the best thing you have ever heard of not only will it knock your socks off it will send them to the moon.
+		 </p>
+	       </div>
+	     </div>
 
+	   <div class="row-fluid section2">
+	     <div class="span5 offset1 copy copy-right">
+	       <p>
+		 Isn't all this just great. remember the more you buy the smarter you are
+		 </p>
+	       </div>
+	     <div class="span5 asset">
+	       <img class="img-polaroid" src="http://placehold.it/480x300">
+	       </div>
+	     </div>
+	   
+	   <!-- fr the FAQ, we use a little jS, using the accordion -->
+	   <!-- this brings in jquery.js and bootstrap.js as dependencies. -->
+	   <!-- http://twitter.github.io/bootstrap/javascript.html#collapse -->
+	   <div class="row-fluid faq">
+	     <div class="span10 offset1">
+	       <h3>FAQ</h3>
+	       <div class="accordion" id="accordion2">
+		 <div class="accordion-group">
+		   <div class="accordion-heading">
+		     <a class="accordion-toggle" data-toggle="collapse"
+			data-parent="#accordion2" href="#collapseOne">
+		       FAQ Central
+		       </a>
+		     </div>
+		   <div id="collapseOne" class="accordion-body collapse">
+		     <div class="accordion-inner">
+		       Frequently asked Questions.
+		       </div>
+		     </div>
+		   </div>
+		 <div class="accordion-group">
+		   <div class="accordion-heading">
+		     <a class="accordion-toggle" data-toggle="collapse"
+			data-parent="#accordion2" href="#collapseTwo">
+		       How many times is it asked before it freuently asked
+		       </a>
+		     </div>
+		   <div id="collapseTwo" class="accordion-body collapse">
+		     <div class="accordion-inner">
+		       Frequently asked Question asked 100 times.
+		       </div>
+		     </div>
+		   </div>
+		 </div>
+	       </div>
 
+	     </div>
+	   </div>
 
-	 </div>
+    <!-- license stuff -->
+    <div class="row-fluid footer">
+      <div class="span12">
+	<p>This work is license under the <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC By-SA 3.0
+	    </a>, without all the cruft that would otherwise be here </p>
+	</div>
+      </div>
+    
+
 </body>
 </html>
 
